@@ -1,0 +1,29 @@
+{
+  "name": "trpc-api",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "nodemon -L --exec ts-node ./server/app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@trpc/server": "10.0.0-rc.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "zod": "^3.19.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/node": "^17.0.12",
+    "eslint-config-custom": "workspace:*",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "tsconfig": "*",
+    "tsconfig-paths": "^4.1.0",
+    "typescript": "^4.8.4"
+  }
+}
