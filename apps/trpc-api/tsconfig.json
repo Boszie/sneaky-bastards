@@ -1,8 +1,12 @@
 {
   "extends": "tsconfig/express-trpc.json",
+  "compilerOptions": {
+    "baseUrl": "."
+  },
   "include": ["src/*.ts", "src/**/*.ts", "src/**/*.js"],
   "exclude": ["node_modules", "dist"],
   "ts-node": {
-    "require": ["tsconfig-paths/register"]
+    "require": ["tsconfig-paths/register"],
+    "esm": true
   }
 }
