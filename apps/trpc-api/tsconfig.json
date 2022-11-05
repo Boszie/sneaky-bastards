@@ -1,12 +1,20 @@
 {
-  "extends": "tsconfig/express-trpc.json",
-  "compilerOptions": {
-    "baseUrl": "."
-  },
-  "include": ["src/*.ts", "src/**/*.ts", "src/**/*.js"],
-  "exclude": ["node_modules", "dist"],
   "ts-node": {
     "require": ["tsconfig-paths/register"],
     "esm": true
+  },
+  "extends": "tsconfig/express-trpc.json",
+  "include": ["src/*.ts", "src/**/*.ts", "src/**/*.js"],
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "outDir": "./build",
+    "rootDir": "src",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@server/*": ["./src/server/*"],
+      "@modules/*": ["./src/modules/*"],
+      "@core/*": ["./src/core/*"]
+    }
   }
 }
